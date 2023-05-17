@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 a {
@@ -11,33 +11,84 @@ a {
 }
 
 body {
-    background-image: url(images/background/desktop-dark.jpg);
+
+    --background-dark: url(images/background/desktop-dark.jpg);
+    --background-light: url(images/background/desktop-light.jpg);
+
+    --card-background-color: rgba(255, 255, 255, 0.1);
+    --card-border-color: rgba(255, 255, 255, 0.5); 
+
+    --primary-color: #FFFF;
+    --secondary-color: #000000;
+
+    background-image: var(--background-dark);
     background-repeat: no-repeat;
     background-position: top;
     font-family: 'Roboto', sans-serif;
 }
 
+.body-light-theme {
+    background-image: var(--background-light);
+}
+
 header {
+    margin: 20px 0px;
     height: 20vh;
     min-height: 200px;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-areas: 
+    'v1 logo switch'
+    'v2 titulo v3';
     align-items: center;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.grid-clear1 {
+    opacity: 0;
+    margin-left: 20px;
+    grid-area: 'v1'
+}
+
+.grid-clear2 {
+    grid-area: 'v2'
+}
+
+.grid-clear3 {
+    grid-area: 'v3'
+}
+
+#logo {
+    grid-area: 'logo';
+}
+
+#switch {
+    margin-right: 20px;
+    grid-area: 'switch';
+    justify-self: end;
+    align-self: start;
 }
 
 main {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main h1 {
-    color: #ffff;
+header h1 {
+    text-align: center;
+    color: var(--primary-color);
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 10px;
+}
+
+
+#titulo {
+    grid-area: 'titulo';
 }
 
 /* ------ CARDS ------ */
@@ -54,8 +105,8 @@ main h1 {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
     backdrop-filter: blur(21px);
     border-radius: 12px;
     height: 208px;
@@ -77,13 +128,13 @@ main h1 {
 
 .card-header-text h2 {
     font-size: 1.2em;
-    color: #ffff;
+    color: var(--primary-color);
     font-weight: 700;
 }
 
 .card-header-text p {
     margin-top: 15px;
-    color: #ffff;
+    color: var(--primary-color);
     font-weight: 100;
     font-size: 13px;
     line-height: 13px;
@@ -138,19 +189,19 @@ main h1 {
     justify-content: space-between;
     width: 118px;
     height: 35px;
-    background-color: #ffff;
+    background-color: var(--primary-color);
     border-radius: 19px;
 }
 
 .card-buttons .button h5 {
     text-transform: uppercase;
-    color: #000000;
+    color: var(--secondary-color);
     line-height: 11px;
 }
 
 .card-buttons .button span {
     text-transform: uppercase;
-    color: #000000;
+    color: var(--secondary-color);
     font-weight: 900;
 }
 
