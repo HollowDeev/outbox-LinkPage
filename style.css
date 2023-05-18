@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
 
 * {
     margin: 0;
@@ -423,7 +423,7 @@ footer {
 
 @media (max-width: 470px) {
 
-    /* ------ HEADER */
+    /* ------ HEADER ------ */
 
     header {
         display: flex;
@@ -468,6 +468,11 @@ footer {
     .card-header-text p {
         font-size: 10px;
         margin-top: 5px;
+        font-weight: 300;
+    }
+
+    .light .card-header-text p {
+        font-weight: 700;
     }
 
     /* ------ CARDS LINGUAGES ------ */
@@ -481,22 +486,31 @@ footer {
         width: 15px;
     }
 
-    .img-js {
+    .img-js, .img-c4d, .img-ai, .img-uml {
         width: 20px;
     }
 
-    .img-php {
+    .img-php, .img-java, .img-ps, .img-postgree, .img-sqls {
         width: 30px;
     }
 
-    .img-mysql {
+    .img-mysql, .img-go {
         width: 50px;
     }
+    
+    .for-now {
+        font-size: .7em;
+    }
+    
 
     /* ------ CARDS BUTTONS ------ */
 
     .card-buttons{
         height: 50px;
+    }
+
+    .card-button_mobile {
+        height: 33px;
     }
 
     .card-buttons .button {
