@@ -100,11 +100,11 @@ header {
 }
 
 .switch-dark {
-    animation: slide-out 0.75s forwards;
+    animation: slide-out 0.75s both;
 }
 
 .switch-light {
-    animation: slide-in 0.75s forwards;
+    animation: slide-in 0.75s both;
 }
 
 #switch-button:hover {

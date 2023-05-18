@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="thema.js" defer></script>
     <title>Equipe OutBox</title>
 </head>
-<body class="" id="body">
-    <header>
+<body id="body" class="" onload="setTheme('storage')">
+    <header >
         <img src="images/switch-dark.png" alt="" height="40px" class="grid-clear1">
         <img src="images/logo/logo-branca.png" alt="OutBox Devs" height="150px" id="logo" class="logo-dark-theme">
         <div id="switch-container">
-            <div id="switch-button">
+            <div id="switch-button" onclick="setTheme('sistem')">
                 <img src="images/switch-dark.png" width="20px" alt="">
             </div>
             <div id="switch-bg"> </div>
