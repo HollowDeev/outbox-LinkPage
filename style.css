@@ -331,7 +331,6 @@ header h1 {
 }
 
 /* ------ CARD ENTRY ANIMATION ------ */
-
 .entry1{
     animation: entry ease 0.5s both;
 }
@@ -360,6 +359,32 @@ header h1 {
 /* ------ VIEWPORT FOR MOBILE ------ */
 
 @media (max-width: 470px) {
+
+    /* ------ HEADER */
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        row-gap: 20px;
+    }
+
+    #switch-container {
+        justify-self: center;
+        align-self: center;
+    }
+
+    main {
+        margin-top: 120px;
+    }
+
+    #switch-button:hover {
+        outline: none;
+    }
+    
+
+    /* ------ CARDS ------ */
 
     .card {
         width: 300px;
