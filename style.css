@@ -439,7 +439,8 @@ footer {
     }
 
     main {
-        margin-top: 120px;
+        margin-top: 130px;
+        height: 130vh;
     }
 
     #switch-button:hover {
@@ -553,17 +554,37 @@ footer {
         font-size: .9em;
         margin-right: 6px;
     }
+
+    /* ------ footer ------ */
+    footer {
+        height: 40vh;
+        flex-direction: column;
+    }
+
+    #footer-text {
+        width: 340px;
+        text-align: center;
+    }
+
+    #footer-social  {
+        width: 340px;
+    }
+
+    #footer-space {
+        height: 4px;
+        width: 200px;
+    }
 }
 
 /* ------ OTHERS VIEW PORTS ------ */
 
-@media (max-width: 1470px) {
+@media (max-width: 1470px) and (min-width: 970px){
     main {
         height: 100vh;
     }
 }
 
-@media (max-width: 970px) {
+@media (max-width: 970px) and (min-width: 470px){
     main {
         height: 170vh;
     }
