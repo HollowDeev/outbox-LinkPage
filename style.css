@@ -197,6 +197,10 @@ header h1 {
     transition: all 0.2s ease;
 }
 
+.light .card-header-text p {
+    font-weight: 400;
+}
+
 .card-header-text p {
     margin-top: 6px;
     color: var(--primary-color);
