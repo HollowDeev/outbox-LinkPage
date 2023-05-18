@@ -6,29 +6,35 @@
     box-sizing: border-box
 }
 
+:root {
+    --background: url(images/background/desktop-dark.jpg);
+    --card-background-color: rgba(255, 255, 255, 0.1);
+    --card-border-color: rgba(255, 255, 255, 0.5); 
+    --switch-hover: rgba(255, 255, 255, 0.20);
+
+    --primary-color: #FFFF;
+    --secondary-color: #000000;
+}
+
+.light {
+    --background: url(images/background/desktop-light.jpg);
+    --card-background-color: rgba(0, 0, 0, 0.1);
+    --card-border-color: rgba(0, 0, 0, 0.5); 
+    --switch-hover: rgba(0, 0, 0, 0.2);
+
+    --primary-color: #131313;
+    --secondary-color: #FFFF;
+}
+
 a {
     text-decoration: none;
 }
 
 body {
-
-    --background-dark: url(images/background/desktop-dark.jpg);
-    --background-light: url(images/background/desktop-light.jpg);
-
-    --card-background-color: rgba(255, 255, 255, 0.1);
-    --card-border-color: rgba(255, 255, 255, 0.5); 
-
-    --primary-color: #FFFF;
-    --secondary-color: #000000;
-
-    background-image: var(--background-dark);
+    background-image: var(--background);
     background-repeat: no-repeat;
     background-position: top;
     font-family: 'Roboto', sans-serif;
-}
-
-.body-light-theme {
-    background-image: var(--background-light);
 }
 
 header {
@@ -63,11 +69,55 @@ header {
     grid-area: 'logo';
 }
 
-#switch {
+/* ------ SWITCH ------ */
+
+#switch-container {
+    position: relative;
+    display: flex;
+    align-items: center;
     margin-right: 20px;
     grid-area: 'switch';
     justify-self: end;
     align-self: start;
+}
+
+#switch-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+    z-index: 999;
+
+    cursor: pointer;
+}
+
+.switch-dark {
+    animation: slide-out 0.75s forwards;
+}
+
+.switch-light {
+    animation: slide-in 0.75s forwards;
+}
+
+#switch-button:hover {
+    transition: outline 0.2s ease-in;
+    outline: 7px solid var(--switch-hover);
+}
+
+#switch-bg {
+    height: 24px;
+    width: 64px;
+    border: 1px solid var(--card-border-color);
+    border-radius: 200px;
+    background-color: var(--card-background-color);
 }
 
 main {
@@ -86,7 +136,6 @@ header h1 {
     margin-bottom: 10px;
 }
 
-
 #titulo {
     grid-area: 'titulo';
 }
@@ -94,6 +143,8 @@ header h1 {
 /* ------ CARDS ------ */
 
 .card-field {
+    position: relative;
+
     width: 85%;
     height: 55vh;
     display: grid;
@@ -105,12 +156,23 @@ header h1 {
 }
 
 .card {
+    position: relative;
+
     background: var(--card-background-color);
     border: 1px solid var(--card-border-color);
     backdrop-filter: blur(21px);
     border-radius: 12px;
     height: 208px;
     width: 390px;
+
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transition: all 0.2s ease;
+    transform: translateY(-20px);
+
+    box-shadow: 0 0 15px var(--switch-hover);
 }
 
 /* ------ CARDS HEADERS ------ */
@@ -130,6 +192,7 @@ header h1 {
     font-size: 1.2em;
     color: var(--primary-color);
     font-weight: 700;
+    transition: all 0.2s ease;
 }
 
 .card-header-text p {
@@ -138,6 +201,7 @@ header h1 {
     font-weight: 100;
     font-size: 13px;
     line-height: 13px;
+    transition: all 0.2s ease;
 }
 
 /* ------ CARDS LINGUAGES ------ */
@@ -230,6 +294,66 @@ header h1 {
 
 .button .text-curriculum {
     margin-right: 6px;
+}
+
+/* ------ ANIMATION ------ */
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes entry {
+    from {
+        opacity: 0;
+        top: -100px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+/* ------ CARD ENTRY ANIMATION ------ */
+
+.entry1{
+    animation: entry ease 0.5s both;
+}
+
+.entry2{
+    animation: entry ease 0.5s both calc(0.1s *2);
+}
+
+.entry3{
+    animation: entry ease 0.5s both calc(0.1s *3);
+}
+
+.entry4{
+    animation: entry ease 0.5s both calc(0.1s *4);
+}
+
+.entry5{
+    animation: entry ease 0.5s both calc(0.1s *5);
+}
+
+.entry6{
+    animation: entry ease 0.5s both calc(0.1s *6);
 }
 
 
