@@ -3,7 +3,7 @@ let button = document.querySelector('#switch-button img')
 let body = document.getElementById('body')
 
 let logo = document.getElementById('logo')
-let instagram = document.getElementById('img-instagram')
+// let instagram = document.getElementById('img-instagram')
 
 let github = document.querySelectorAll(".img-github")
 let linkedin = document.querySelectorAll(".img-linkedin")
@@ -40,7 +40,7 @@ setTheme = (type) => {
                     }
                 }) 
 
-                instagram.src="images/botoes/instagram-light.png"
+                // instagram.src="images/botoes/instagram-light.png"
                 logo.src="images/logo/logo-preta.png"
                 button.src="images/switch-light.png"
 
@@ -75,7 +75,7 @@ setTheme = (type) => {
                     }
                 })
 
-                instagram.src="images/botoes/instagram-light.png"
+                // instagram.src="images/botoes/instagram-light.png"
                 logo.src="images/logo/logo-preta.png"
                 button.src="images/switch-light.png"
 
@@ -105,7 +105,7 @@ setTheme = (type) => {
                     }
                 })
 
-                instagram.src="images/botoes/instagram-dark.png"
+                // instagram.src="images/botoes/instagram-dark.png"
                 logo.src="images/logo/logo-branca.png"
                 button.src="images/switch-dark.png"
                 
