@@ -240,8 +240,12 @@ header h1 {
     width: 29px;
 }
 
-.img-php, .img-java, .img-ps, .img-postgree, .img-sqls {
+.img-php, .img-java, .img-ps, .img-postgree, .img-sqls, .img-mongo, .img-git, .img-python {
     width: 40px;
+}
+
+.img-node, .img-react {
+    width: 43px;
 }
 
 .img-mysql {
@@ -249,7 +253,7 @@ header h1 {
 }
 
 .img-go  {
-    width: 80px;
+    width: 65px;
 }
 
 .for-now {
@@ -496,7 +500,7 @@ footer {
         width: 20px;
     }
 
-    .img-php, .img-java, .img-ps, .img-postgree, .img-sqls {
+    .img-php, .img-java, .img-ps, .img-postgree, .img-sqls, .img-mongo, .img-node, .img-react, .img-git, .img-python {
         width: 30px;
     }
 
