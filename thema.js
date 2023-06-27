@@ -3,7 +3,6 @@ let button = document.querySelector('#switch-button img')
 let body = document.getElementById('body')
 
 let logo = document.getElementById('logo')
-// let instagram = document.getElementById('img-instagram')
 
 let github = document.querySelectorAll(".img-github")
 let linkedin = document.querySelectorAll(".img-linkedin")

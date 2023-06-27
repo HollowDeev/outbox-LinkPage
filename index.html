@@ -14,10 +14,11 @@
     <link rel="shortcut icon" href="images/outbox-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="thema.js" defer></script>
+    <script src="modal.js" defer></script>
     
     <title>Equipe OutBox</title>
 </head>
-<body id="body" class="" onload="setTheme('storage')">
+<body id="body" class="" onload="setTheme('storage');">
     <header >
         <img src="images/switch-dark.png" alt="" height="40px" class="grid-clear1">
         <img src="images/logo/logo-branca.png" alt="OutBox Devs" height="150px" id="logo" class="logo-dark-theme">
@@ -341,16 +342,28 @@
         <div id="footer-text">
             <h2>Feito com muito 🖤 pelos OUTBOX DEVS</h2>
         </div>
-        <!-- <div id="footer-space">
+        <div id="footer-space">
 
-        </div> -->
-        <!-- <a href="https://www.instagram.com" target="_blank" id="footer-social">
-            <h2>Veja nosso perfil</h2>
-            <div id="instagram-logo">
-                <img src="images/botoes/instagram-dark.png" alt="" width="32px" id="img-instagram">
-            </div>
-            <p style="color: var(--primary-color)">@outbox_devs</p>
-        </a> -->
+        </div>
+         <a id="footer-social">
+            <buttom class="footer-btn" onclick="modificarModal('abrir')">APRESENTAÇÃO - APLICAÇÃO </buttom>
+        </a> 
     </footer>
+
+    <dialog id="modal">
+        <p onclick="modificarModal('fechar')" id="modal-fechar">X</p>
+        <h1>ACESSE</h1>
+        <div id="modal-opcoes">
+            <div class="modal-opcao">
+                <h2>A NOSSA APRESENTAÇÃO <br> <span id="modal-opcao-span">ASSINCRONA</span> </h2>
+                <a id="btn-modal-apresentation" class="modal-btn">CONFERIR APRESENTAÇÃO</a>
+            </div>
+
+            <div class="modal-opcao">
+                <h2>A NOSSA<br> <span id="modal-opcao-span">APLICAÇÃO</span> </h2>
+                <a id="btn-modal-apresentation" class="modal-btn" target="_blank" href="https://faqfatec.netlify.app/index.html">CONFERIR APLICAÇÃO</a>
+            </div>
+        </div>
+    </dialog>
 </body>
 </html>
