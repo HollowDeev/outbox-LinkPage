@@ -66,8 +66,7 @@ header {
 
 #modal {
     width: 70%;
-    /* min-width: 1400px; */
-    height: 70vh;
+    min-height: 700px;
 
     display: none;
     flex-direction: column;
@@ -99,7 +98,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 70px;
 }
 
 .modal-opcao {
@@ -126,7 +125,7 @@ header {
     margin: 0;
 }
 
-#modal-opcao-span {
+.modal-opcao-span {
     font-size: 3.8rem;
     font-weight: 900;
 }
@@ -748,5 +747,41 @@ footer {
     #footer-space {
         height: 4px;
         width: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    #modal h1 {
+        font-size: 40px;
+    }
+
+    .modal-opcao {
+        width: 370px;
+    }
+
+    .modal-opcao h2 {
+        font-size: 1rem;
+    }
+
+    .modal-opcao-span {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-opcao {
+        width: 290px;
+        height: 270px;
+    }
+
+    #modal a {
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 350px) {
+    #modal {
+        width: 95%;
     }
 }
