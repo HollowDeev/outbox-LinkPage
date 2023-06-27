@@ -780,7 +780,7 @@ footer {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     main {
         height: 132vh;
     }
