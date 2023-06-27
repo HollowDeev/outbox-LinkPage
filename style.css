@@ -727,7 +727,7 @@ footer {
 
 @media (max-width: 970px) {
     main {
-        height: 105vh;
+        height: 165vh;
     }
 
     footer {
@@ -781,6 +781,10 @@ footer {
 }
 
 @media (max-width: 350px) {
+    main {
+        height: 132vh;
+    }
+
     #modal {
         width: 95%;
     }
