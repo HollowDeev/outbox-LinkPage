@@ -751,6 +751,10 @@ footer {
 }
 
 @media (max-width: 800px) {
+    #modal {
+        justify-content: normal;
+        min-height: initial;
+    }
     #modal h1 {
         font-size: 40px;
     }
