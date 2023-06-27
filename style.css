@@ -722,12 +722,13 @@ footer {
 @media (max-width: 1470px) and (min-width: 970px){
     main {
         height: 100vh;
+        min-height: 800px;
     }
 }
 
 @media (max-width: 970px) {
     main {
-        height: 165vh;
+        min-height: 1460px;
     }
 
     footer {
@@ -786,7 +787,7 @@ footer {
 
 @media (max-width: 450px) {
     main {
-        height: 132vh;
+        min-height: 1200px;
     }
 
     #modal {
